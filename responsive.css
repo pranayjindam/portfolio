@@ -30,7 +30,7 @@ nav ul .fa-solid{
     display: block;
     font-size: 80px;
     position: relative;
-   top: -37%;
+   top: -44%;
 
 
 }
@@ -99,7 +99,7 @@ nav ul i{
         top: 0%;
     }
     #name .cname{
-        color: #ff004f;
+        color: white;
     }
     nav{
         display: flex;
@@ -137,6 +137,8 @@ nav ul i{
         scale: 1.5;
         margin-left: 20%;
         margin-top: 90%;
+        width:100;
+        display:flex;
     }
     .row{
         display: flex;
