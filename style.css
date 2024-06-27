@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
 }
 nav ul .fa-solid{
-    display: block;
+    display: none;
     position: absolute;
     top: 25px;
     left: 25px;
