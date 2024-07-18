@@ -133,8 +133,10 @@ nav ul li a{
     position: relative;
 }
 nav ul li a:hover{
-    width: 100%;
-    color: #ff004f;
+   border: white 3px solid;
+   border-radius: 5px;
+    
+
 }
 
 #about{
