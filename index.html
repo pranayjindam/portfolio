@@ -5,22 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <!-- <link rel="stylesheet" href="response.css"> -->
     <title> Portfolio website</title>
     <script src="https://kit.fontawesome.com/288dfedc20.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </head>
 <body>
     <div id="header">
-        <h1 id="pname">Pranay.</h1>
+        <!-- <h1 id="pname">Pranay.</h1> -->
        <div class="container">
-        <h1 id="hi">Hi Iam </h1>
-        <h1 id="profilename">Pranay Jindam</h1>
+        <h1 id="hi">Hi There...<i class="fa-regular fa-hand-peace"></i></h1>
+        <h1 id="profilename"><pre><span>I AM  </span>PRANAY JINDAM</pre></h1>
 
         <nav>
             <ul id="sidemenu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Projects</a></li>
-                <li><a href="#portfolio">Experience</a</li>
+                <li><a href="#portfolio">Achievements</a</li>
                 <li><a href="#contact">Contact</a></li>
                 <i id="times" class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
@@ -38,7 +44,7 @@
                     <img src="1679498700433-removebg-preview.png" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="subtitle">About</h1>
+                    <h1 class="subtitle">About <span>Me</span></h1>
                     <p>I have always been fascinated by the field of engineering, and I am eager to contribute my skills and knowledge to make a positive impact. Being a quick learner and a problem solver, I believe that my theoretical knowledge and practical experience make me a suitable candidate for this role.</p>
 
                     <div class="tab-titles">
@@ -48,12 +54,13 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>java</span><br>for coding and web applications</li>
-                            <li><span>python</span><br>for coding</li>
-                            <li><span></span><br>HTML</li> 
-                            <li><span></span><br>CSS</li> 
-                            <li><span></span><br>SQL</li> 
-                            <li><span></span><br>C</li> 
+                            <li>java</li>
+                            <li>python</li>
+                            <li>HTML</li> 
+                            <li>CSS</li> 
+                            <li>javascript</li> 
+                            <li>SQL</li> 
+                            <li>C</li> 
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
@@ -80,40 +87,35 @@
             <h1 class="subtitle">My Projects</h1>
             <div class="services-list">
                  <a href="https://pranayjindam.github.io/weather-app/weather/">
-                    <div>
+                    <div class="scroll">
                         <i class="fa-brands fa-github"></i>
                         <h2>Weather app</h2>
-                        <p>Developed a weather web-app using API.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
                     </div>
                  </a>
-                <a href="https://pranayjindam.github.io/food_delivery/">
-                <div>
+                <div class="scroll">
                     <i class="fa-brands fa-github"></i>
                     <h2>Food Delivery app</h2>
-                    <p>created a forntend of food delivery web-app using CSS.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
                 </div>
-                </a>
-                <a href="https://github.com/pranayjindam/snake_game-2d">
-                <div>
+                <div class="scroll">
                     <i class="fa-brands fa-github"></i>
                     <h2>Snake Game</h2>
-                    <p>developed a 2d snake game using pygame.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
                    
                 </div>
-                </a>
-                <a href="https://github.com/pranayjindam/volume_control">
-                <div>
+                <div class="scroll">
                     <i class="fa-brands fa-github"></i>
-                    <h2>Volume Control Hand-gesture</h2>
-                    <p>developed a volume control with hand-gesture using machine learning.</p>
+                    <h2>Spotify Clone</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
                     
                 </div>
-                </a>
             </div>
         </div>
     </div>
+   
 
-   <div id="portfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="subtitle">Achievements</h1>
             <div class="work-list">
@@ -175,11 +177,11 @@
                         </div>
                 </div>
                 <div class="work">
-                    <img src="hackerrank python.png" alt="">
+                    <img src="infosys-java.png" alt="">
                     <div class="layer">
                         
-                        <p>Completed Python Basics in Hackerrank</p>
-                        <a href="https://www.hackerrank.com/profile/21eg105f30"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <p>infosys java Programming fundamentals</p>
+                        <a href="infosys-java.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                 </div>
             </div>
@@ -190,10 +192,10 @@
     <!-- ----------------------contact------------------- -->
     <div id="contact">
         <div class="container">
-            <div class="row">
+            <div class="row scroll ">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:pranayjindam0708@gmail.com" class="maillink">pranayjindam0708@gmail.com</a></p>
+                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:pranayjindam0708@gmail.com" class="maillink scroll">pranayjindam0708@gmail.com</a></p>
                     <p><i class="fa-solid fa-phone"></i> 6300370683</p>
                     <div class="social-icons">
                         <a href="https://www.facebook.com/pranay.jindam.5" ><i class="fa-brands fa-facebook"></i></a>
@@ -214,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
+        <div class="copyright ">
             <p>copyright @ pranay jindam. <i class="fa-solid fa-heart"></i> </p>
         </div>
     </div>
