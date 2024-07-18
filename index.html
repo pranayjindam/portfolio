@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title> Portfolio website</title>
+    <script src="https://kit.fontawesome.com/288dfedc20.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <h1 id="pname">Pranay.</h1>
+       <div class="container">
+        <h1 id="hi">Hi Iam </h1>
+        <h1 id="profilename">Pranay Jindam</h1>
+
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#portfolio">Experience</a</li>
+                <li><a href="#contact">Contact</a></li>
+                <i id="times" class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+        </nav>
+        <i id="bars" class="fa-solid fa-bars" onclick="openmenu()"></i>
+       
+        
+       </div>
+     <img src="IMG_20240218_221145-removebg.png" alt="" id="profilephoto">
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="1679498700433-removebg-preview.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About</h1>
+                    <p>I have always been fascinated by the field of engineering, and I am eager to contribute my skills and knowledge to make a positive impact. Being a quick learner and a problem solver, I believe that my theoretical knowledge and practical experience make me a suitable candidate for this role.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" on>Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!-- <p class="tab-links" onclick="opentab('projects')">Projects</p> -->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>java</span><br>for coding and web applications</li>
+                            <li><span>python</span><br>for coding</li>
+                            <li><span></span><br>HTML</li> 
+                            <li><span></span><br>CSS</li> 
+                            <li><span></span><br>SQL</li> 
+                            <li><span></span><br>C</li> 
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>B.Tech Computer Science and Engineering<br/> Anurag University,Hyderabad||CGPA-8.03</li>
+                            <li><span>2019-2021</span><br>Intermediate<br>sai sri Junior College,Siricilla||Percentage-92%</li>
+                            <li><span>2019</span><br>siddhartha E/m high school||CGPA-9.5</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span></span><br>Portfolio</li>
+                            <li><span></span><br>food delivery website</li>
+                            <li><span></span><br>snake game using Pygame</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="services-list">
+                 <a href="https://pranayjindam.github.io/weather-app/weather/">
+                    <div>
+                        <i class="fa-brands fa-github"></i>
+                        <h2>Weather app</h2>
+                        <p>Developed a weather web-app using API.</p>
+                    </div>
+                 </a>
+                <a href="https://pranayjindam.github.io/food_delivery/">
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Food Delivery app</h2>
+                    <p>created a forntend of food delivery web-app using CSS.</p>
+                </div>
+                </a>
+                <a href="https://github.com/pranayjindam/snake_game-2d">
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Snake Game</h2>
+                    <p>developed a 2d snake game using pygame.</p>
+                   
+                </div>
+                </a>
+                <a href="https://github.com/pranayjindam/volume_control">
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Volume Control Hand-gesture</h2>
+                    <p>developed a volume control with hand-gesture using machine learning.</p>
+                    
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Experience</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="PRANAY JINDAM.png" alt="">
+                    <div class="layer">
+                    <h3>Social app</h3>
+                    <p>Completed a Java development intern at InternPe</p>
+                    <a href="PRANAY JINDAM.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg" alt="">
+                    <div class="layer">
+                    <h3>Social app</h3>
+                    <p>Completed a python development intern with cognifyz technologies</p>
+                    <a href="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="WhatsApp Image 2024-05-19 at 12.07.20_9a9c010a.jpg" alt="">
+                    <div class="layer">
+                        <h3>Social app</h3>
+                        <p>Completed AIML internship through edu Skills</p>
+                        <a href="WhatsApp Image 2024-05-19 at 12.07.20_9a9c010a.jpg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+               
+            </div>
+            <a href="#" class="btn">see more </a>
+        </div>
+
+    </div>
+    <!-- ----------------------contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:pranayjindam0708@gmail.com" class="maillink">pranayjindam0708@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i> 6300370683</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/pranay.jindam.5" ><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pranay_jindam"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pranay-jindam-624b37240"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/pranayjindam"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="pranayresume (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="message"   rows="6" placeholder="your message" required  ></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @ pranay jindam. <i class="fa-solid fa-heart"></i> </p>
+        </div>
+    </div>
+     <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontents){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEXRfLGZowwyZWeaGiFwMeMc2fw3-DBV8rJluPKr6DzLrTwy-foxyE-n2PJq3O7Qoh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => msg.innerHTML="Message sent successfully")
+            setTimeout(function() {
+                msg.innerHTML=""
+            }, 5000);
+            form.reset()
+        })
+            .catch(error => console.error('Error!', error.message))
+      <!-- </script> -->
+
+
+      <script>
+        var sidemenu=document.getElementById("sidemenu");
+        var bar=document.getElementById("bars");
+        function openmenu(){
+            sidemenu.style.right="0";
+            bar.style.display="none";
+            
+            
+        }
+        function closemenu(){
+            sidemenu.style.right="-300px";
+            bar.style.display="block";
+        }
+      </script>
+</body> 
+</html>
