@@ -10,6 +10,19 @@ body{
     cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1030.cur), auto !important;
    
 }
+#sidemenu{
+    background: #ff004f;
+    position: fixed;
+    top:0px;
+    width: 2000px;
+    height: 40px;
+    left:0px;
+    text-align: center;
+}
+#sidemenu li{
+    position: relative;
+    left: 5%;
+}
 @keyframes appear{
     0%{
         
