@@ -7,11 +7,10 @@ body{
     background: #000;
     color: white;
     min-height: 100vh;
-/*     cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1030.cur), auto !important; */
-     cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur192.cur), auto !important;
-   
-}
- .typewriter {
+    /* cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1030.cur), auto !important; */
+    /* cursor: url("https://www.colorcombos.com/images/colors/FF004F.png"),auto; */
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur192.cur), auto !important;} 
+    .typewriter {
         font-size: 2em;
         color: white;
         margin: 20px auto;
@@ -26,15 +25,8 @@ body{
 
         animation: blink-caret 0.75s step-end infinite;
     }
-.caption{
-    position: relative;
-    left: 40%;
-}
-.cap2{
-    position: relative;
-    top: 80px;
-}
-   @keyframes blink-caret {
+
+    @keyframes blink-caret {
         from, to { border-color: transparent; }
         50% { border-color: white; }
     }
@@ -52,6 +44,14 @@ body{
     height: 40px;
     left:0px;
     text-align: center;
+}
+.caption{
+    position: relative;
+    left: 40%;
+}
+.cap2{
+    position: relative;
+    top: 80px;
 }
 #sidemenu li{
     position: relative;
