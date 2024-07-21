@@ -57,16 +57,7 @@ body{
     position: relative;
     left: 5%;
 }
-@keyframes appear{
-    0%{
-        
-       scale:0.5
-    }
-    50%{ 
-       
-       scale: 1;
-    }
-}
+
 .work,.scroll,.subtitle,a,input,.social-icons,.about-col-1{
     animation: appear 10s linear;
     animation-timeline: view();
