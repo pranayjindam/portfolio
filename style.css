@@ -11,6 +11,39 @@ body{
      cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur192.cur), auto !important;
    
 }
+.typewriter {
+        font-size: 2em;
+        color: white;
+        margin: 20px auto;
+        border-right: 2px solid white;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        height: 2em;
+        position: relative;
+        top: -20px;
+        left: 19%;
+
+        animation: blink-caret 0.75s step-end infinite;
+    }
+.caption{
+    position: relative;
+    left: 40%;
+}
+.cap2{
+    position: relative;
+    top: 80px;
+}
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: white; }
+    }
+    .iama{
+        position: relative;
+        font-size: 40px;
+        left: 10%;
+        top: 40px;
+    }
 #sidemenu{
     background: #ff004f;
     position: fixed;
