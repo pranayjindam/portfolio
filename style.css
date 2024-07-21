@@ -11,7 +11,7 @@ body{
      cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur192.cur), auto !important;
    
 }
-.typewriter {
+ .typewriter {
         font-size: 2em;
         color: white;
         margin: 20px auto;
@@ -34,7 +34,7 @@ body{
     position: relative;
     top: 80px;
 }
-    @keyframes blink-caret {
+   @keyframes blink-caret {
         from, to { border-color: transparent; }
         50% { border-color: white; }
     }
