@@ -1,822 +1,314 @@
-*{
-    margin: 0;padding: 0;
-    font-family: 'Poppins',sans-serif;
-    box-sizing: border-box;
-}
-body{
-    background: #000;
-    color: white;
-    min-height: 100vh;
-    /* cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1030.cur), auto !important; */
-    /* cursor: url("https://www.colorcombos.com/images/colors/FF004F.png"),auto; */
-    cursor: url(https://cur.cursors-4u.net/cursors/cur-2/cur192.cur), auto !important;} 
-    .typewriter {
-        font-size: 2em;
-        color: white;
-        margin: 20px auto;
-        border-right: 2px solid white;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        height: 2em;
-        position: relative;
-        top: -20px;
-        left: 19%;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <link rel="stylesheet" href="response.css"> -->
+    <title> Portfolio website</title>
+    <script src="https://kit.fontawesome.com/288dfedc20.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const words = [
+                "Programmer",
+                "Developer",
+                "Problem Solver",
+                "Student"
+            ];
+            let index = 0;
+            let wordIndex = 0;
+            let currentWord = "";
+            let isDeleting = false;
 
-        animation: blink-caret 0.75s step-end infinite;
-    }
+            function typeWriter() {
+                if (wordIndex < words.length) {
+                    if (!isDeleting && index < words[wordIndex].length) {
+                        currentWord = words[wordIndex].substring(0, index + 1);
+                        index++;
+                    } else if (isDeleting && index > 0) {
+                        currentWord = words[wordIndex].substring(0, index - 1);
+                        index--;
+                    }
 
-    @keyframes blink-caret {
-        from, to { border-color: transparent; }
-        50% { border-color: white; }
-    }
-    .iama{
-        position: relative;
-        font-size: 40px;
-        left: 10%;
-        top: 40px;
-    }
-#sidemenu{
-    background: #ff004f;
-    position: fixed;
-    top:0px;
-    width: 2000px;
-    height: 40px;
-    left:0px;
-    text-align: center;
-}
-.caption{
-    position: relative;
-    left: 40%;
-}
-.cap2{
-    position: relative;
-    top: 80px;
-}
-#sidemenu li{
-    position: relative;
-    left: 5%;
-}
-@keyframes appear{
-    0%{
-        
-       scale:0.5
-    }
-    50%{ 
+                    document.getElementById("typewriter-text").innerHTML = currentWord;
+
+                    let speed = 150;
+                    if (!isDeleting && index === words[wordIndex].length) {
+                        speed = 2000; // Pause before deleting
+                        isDeleting = true;
+                    } else if (isDeleting && index === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        speed = 500; // Pause before typing next word
+                    }
+
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <!-- <h1 id="pname">Pranay.</h1> -->
+       <div class="container">
+        <h1 id="hi">Hi There...<i class="fa-regular fa-hand-peace"></i></h1>
+        <h1 id="profilename"><pre><span>I AM  </span>PRANAY JINDAM</pre></h1>
+        <pre class="iama">Iam a</pre>
+        <div class="typewriter">
+            <p id="typewriter-text"></p>
+        </div>
+        <h1 class="cap2">Pursuing My B.Tech Degree At Anurag University </h1> 
+        <nav>
+            
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Projects</a></li>
+                <li><a href="#portfolio">Achievements</a</li>
+                <li><a href="#contact">Contact</a></li>
+                <i id="times" class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+        </nav>
+        <i id="bars" class="fa-solid fa-bars" onclick="openmenu()"></i>
        
-       scale: 1;
-    }
-}
-.work,.scroll,.subtitle,a,input,.social-icons,.about-col-1{
-    animation: appear 10s linear;
-    animation-timeline: view();
-    animation-range: entry cover;
-}
-nav ul .fa-solid{
-    display: block;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-}
-#bars{
-    display: none;
-}
-#times{
-    display: none;
-   }
-#pname{
-    color: white;
-    margin-left: 10px;
-}
-#header{
-    width: 100%;
-    height: 100vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    position:relative;
+       
+       </div>
+     <img src="IMG_20240218_221145-removebg.png" alt="" id="profilephoto">
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="1679498700433-removebg-preview.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About <span>Me</span></h1>
+                    <p>I have always been fascinated by the field of engineering, and I am eager to contribute my skills and knowledge to make a positive impact. Being a quick learner and a problem solver, I believe that my theoretical knowledge and practical experience make me a suitable candidate for this role.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" on>Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <!-- <p class="tab-links" onclick="opentab('projects')">Projects</p> -->
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>java</li>
+                            <li>python</li>
+                            <li>HTML</li> 
+                            <li>CSS</li> 
+                            <li>javascript</li> 
+                            <li>SQL</li> 
+                            <li>C</li> 
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021-2025</span><br>B.Tech Computer Science and Engineering<br/> Anurag University,Hyderabad||CGPA-8.03</li>
+                            <li><span>2019-2021</span><br>Intermediate<br>sai sri Junior College,Siricilla||Percentage-92%</li>
+                            <li><span>2019</span><br>siddhartha E/m high school||CGPA-9.5</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span></span><br>Portfolio</li>
+                            <li><span></span><br>food delivery website</li>
+                            <li><span></span><br>snake game using Pygame</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Projects</h1>
+            <div class="services-list">
+                 <a href="https://pranayjindam.github.io/weather-app/weather/">
+                    <div class="scroll">
+                        <i class="fa-brands fa-github"></i>
+                        <h2>Weather app</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
+                    </div>
+                 </a>
+                <div class="scroll">
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Food Delivery app</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
+                </div>
+                <div class="scroll">
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Snake Game</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
+                   
+                </div>
+                <div class="scroll">
+                    <i class="fa-brands fa-github"></i>
+                    <h2>Spotify Clone</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, mollitia.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
    
-}
-#profilephoto{
-    height: 600px;
-    width: 400px;
-    position: relative;
-    left: 65%;
-    top: -75%;
-   
-}
 
-#profilename{
-    color: #ff004f;
-    font-size: 60px;
-    font-weight: 600;
-    position: relative;
-    top: 70%;
-    left:10%
-}
-#profilename span{
-    color:white ;
-    font-size: 60px;
-    font-weight: 600;
-    position: relative;
-    left:0%
-}
-#hi{
-    position: relative;
-    left:10%;
-    top: 70%;
-    color:#ff004f;
-    font-weight: 400;
-}
-.container{
-    padding: 10% 10%;
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Achievements</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="PRANAY JINDAM.png" alt="">
+                    <div class="layer">
+                    <p>Completed a Java development intern at InternPe</p>
+                    <a href="PRANAY JINDAM.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work leetcode-badge">
+                    <img src="https://assets.leetcode.com/static_assets/marketing/2024-50.gif" alt="badge gif" class="z-modal-6 h-[120px] w-[120px]" width="60%" height="60%" >
+                    <div class="layer">
+                    <a href="https://leetcode.com/u/pranay0708/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h2>LeetCode</h2>
+                    </div>
+                </div>
+                <div class="work leetcode-badge">
+                   <img src="pythonbadge-removebg-preview.png" alt="">
+                    <div class="layer">
+                    <a href="https://www.hackerrank.com/profile/21eg105f30"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <h2>Hackerrank</h2>
+                    </div>
+                </div>
+               
+                <div class="work">
+                    <img src="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg" alt="">
+                    <div class="layer">
+                  
+                    <p>Completed a python development intern with cognifyz technologies</p>
+                    <a href="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg" alt="">
+                    <div class="layer">
+                  
+                    <p>Completed a python development intern with cognifyz technologies</p>
+                    <a href="WhatsApp Image 2024-05-29 at 23.13.05_de43b732.jpg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+               
+                
+                <div class="work">
+                    <img src="WhatsApp Image 2024-05-19 at 12.07.20_9a9c010a.jpg" alt="">
+                    <div class="layer">
+                        
+                        <p>Completed AIML internship through edu Skills</p>
+                        <a href="WhatsApp Image 2024-05-19 at 12.07.20_9a9c010a.jpg"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+                <div class="work">
+                    <img src="hackerrank python.png" alt="">
+                    <div class="layer">
+                        
+                        <p>Completed Python Basics in Hackerrank</p>
+                        <a href="https://www.hackerrank.com/profile/21eg105f30"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+                <div class="work">
+                    <img src="infosys-java.png" alt="">
+                    <div class="layer">
+                        
+                        <p>infosys java Programming fundamentals</p>
+                        <a href="infosys-java.png"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+            </div>
+            <a href="#" class="btn">see more </a>
+        </div>
 
-}
-#name{
-    font-size: 50px;
-    position: relative;
-    left:10%;
-    top: 0%;
-}
-#name .cname{
-    color: #ff004f;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 6%;
-    left: 52%;
-    z-index: 1000;
-    width: 90%;
+    </div>
+    <!-- ----------------------contact------------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row scroll ">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:pranayjindam0708@gmail.com" class="maillink scroll">pranayjindam0708@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i> 6300370683</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/pranay.jindam.5" ><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pranay_jindam"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pranay-jindam-624b37240"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/pranayjindam"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="pranayresume (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                    <input type="text" name="name" placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required>
+                    <textarea name="message"   rows="6" placeholder="your message" required  ></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright ">
+            <p>copyright @ pranay jindam. <i class="fa-solid fa-heart"></i> </p>
+        </div>
+    </div>
+     <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tablink of tabcontents){
+                tablink.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </scrip>
+    <!-- <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEXRfLGZowwyZWeaGiFwMeMc2fw3-DBV8rJluPKr6DzLrTwy-foxyE-n2PJq3O7Qoh/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => msg.innerHTML="Message sent successfully")
+            setTimeout(function() {
+                msg.innerHTML=""
+            }, 5000);
+            form.reset()
+        })
+            .catch(error => console.error('Error!', error.message))
+      <!-- </script> -->
 
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bolder;
-    position: relative;
-}
-nav ul li a:hover{
-   border: white 3px solid;
-   border-radius: 5px;
-    
 
-}
-
-#about{
-    padding: 80px 0;
-    color: #ababab;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.about-col-1{
-    flex-basis: 35%;
-    background: #4f4848;
-    height:400px;
-    border-radius: 10px;
-}
-.about-col-1 img{
-    position: relative;
-    top: -44%;
-    filter: brightness(1);
-}
-.about-col-2{
-    flex-basis:60% ;
-}
-.about-col-2 span{
-    color: #ff004f;
-}
-.subtitle{
-    font-size:50px ;
-    font-weight: 600;
-    color: white;
-    
-}
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-
-}
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content:'';
-    width: 100%;
-    height: 3px;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links:hover{
-    color: #ff004f;
-}
-.tab-links .active-link{
-    width: 50%;
-    color: #ff004f;
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-
-}
-.tab-contents ul li span{
-    color: #ff004f;
-    font-size: 14px;
-}
-.leetcode-badge{
-    border: white solid 2px;
-}
-.leetcode-badge img{
-   margin-top: 10%;
-  
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-#services{
-    padding: 60px 0;
-
-}
-#sla{
-    text-decoration: none;
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 50px;
-}
-.services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s,transform 0.5s;
-
-}
-.services-list div i{
-    font-size: 50px;
-    margin-bottom:30px ;
-}
-.services-list a{
-    text-decoration: none;
-    color: white;
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.services-list div:hover{
-    background: #ff004f;
-    transform:translateY(-10px) ;
-}
-
-#portfolio{
-    padding: 50px 0;
-    
-}
-.work-list
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 50px;
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: 50%;
-}
-.work img{
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    transition:transform 0.5s ;
-}
-.layer{
-    width: 100%;
-    height:0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-}
-.work:hover .layer{
-    height: 100%;
-}
-.btn{
-    display: block;
-    margin: 50px auto;
-    width:fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background: #ff004f;
-    
-}
-
-/* ---------------contact-------------------- */
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-}
-.contact-left{
-    margin-top: 30px;
-
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline;
-}
-.social-icons a:hover{
-    color: #ff004f;
-    transform: rotateX(360);
-}
-.btn.btn2{
-display: inline-block;
-background: #ff004f;
-}
-.contact-right form{
-    width: 100%;
-
-}
-form input,form textarea{
-width: 100%;
-border: 0;
-outline: none;
-background: #262626;
-padding: 15px;
-margin: 15px 0;
-columns: #fff;
-font-size: 18px;
-border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: red;
-}
-#msg{
-color: #61b752;
-margin-top: -40px;
-display: block;
-}
-.maillink{
-    text-decoration: none;
-    color: #767474
-}
-.maillink:hover{
-    text-decoration: none;
-    color: #ff004f
-}
-textarea{
-    resize: none;
-}
-/* IPHONE SE **********************************************************************************************************************/
-@media  (max-width:376px)
-{
-    #profilephoto{
-        height: 300px;
-        width: 300px;
-        position: relative;
-        left: 25%;
-        top: 5%;
-    } 
-    #hi{
-        position: relative;
-        left:10%;
-        top: 50%;
-        font-size: 40px;
-    }
-    
-.container{
-    padding: 8% 8%;
-
-}
-#name{
-    font-size: 30px;
-    position: relative;
-    left:10%;
-    top: 0%;
-}
-#name .cname{
-    color: #ff004f;
-}
-nav{
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 6%;
-    left: 70%;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bolder;
-    position: relative;
-}
-nav ul li a:hover{
-    width: 100%;
-    color: #ff004f;
-}
-
-#about{
-    padding: 80px 0;
-    color: #ababab;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.about-col-1{
-    flex-basis: 35%;
-    background: #4f4848;
-    height:400px;
-    border-radius: 10px;
-    position: relative;
-    left: 5%;
-    width: 400px;
-    display: none;
-}
-.about-col-1 img{
-    position: relative;
-    top: -44%;
-    filter: brightness(1);
-    scale: 0.8;
-    top: -30%;
-    left: 3%;
-}
-.about-col-2{
-    flex-basis:60% ;
-}
-.subtitle{
-    font-size:60px ;
-    font-weight: 600;
-    color: white;
-    position: relative;
-    left: 5%;
-
-}
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-
-}
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content:'';
-    width: 100%;
-    height: 3px;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links:hover{
-    color: #ff004f;
-}
-.tab-links .active-link{
-    width: 50%;
-    color: #ff004f;
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-
-}
-.tab-contents ul li span{
-    color: #ff004f;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-#services{
-    padding: 60px 0;
-    position: relative;
-    left: 15%;
-
-}
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 50px;
-}
-.services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s,transform 0.5s;
-
-}
-.services-list div i{
-    font-size: 50px;
-    margin-bottom:30px ;
-}
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size:12px ;
-    margin-top: 20px;
-    display: inline-block;
-}
-.services-list div:hover{
-    background: #ff004f;
-    transform:translateY(-10px) ;
-}
-
-#portfolio{
-    padding: 50px 0;
-    
-}
-.work-list
-{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap:40px;
-    margin-top: 50px;
-    position: relative;
-    left: 20%;
-    
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.work img{
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    transition:transform 0.5s ;
-}
-.layer{
-    width: 100%;
-    height:0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-.layer a{
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-.work:hover img{
-    transform: scale(1.1);
-}
-.work:hover .layer{
-    height: 100%;
-}
-.btn{
-    display: block;
-    margin: 50px auto;
-    width:fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-    position: relative;
-    
-}
-.btn:hover{
-    background: #ff004f;
-    
-}
-
-/* ---------------contact-------------------- */
-.contact-left{
-    flex-basis: 95%;
-}
-.contact-right{
-    flex-basis: 60%;
-    position: relative;
-    left: 30%;
-}
-.contact-left{
-    margin-top: 30px;
-    position: relative;
-    left: 30%;
-    font-size: 20px;
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 30px;
-    margin-top: 10px;
-    position: relative;
-    left: -5%;
-}
-.social-icons{
-    margin-top: 30px;
-    font-size: 60px;
-
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline;
-}
-.social-icons a:hover{
-    color: #ff004f;
-    transform: rotateX(360);
-}
-.btn .btn2{
-display: inline-block;
-background: #ff004f;
-width:80%;
-
-}
-.contact-right form{
-    width: 100%;
-
-}
-form input,form textarea{
-width: 180%;
-border: 0;
-outline: none;
-background: #262626;
-padding: 15px;
-margin: 15px 0;
-columns: #fff;
-font-size: 18px;
-border-radius: 6px;
-position: relative;
-left: -30%;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-    width:120%;
-    position: relative;
-    left: 5%;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-    position: relative;
-    left: 16%;
-}
-.copyright i{
-    color: red;
-}
-#msg{
-color: #61b752;
-margin-top: -40px;
-display: block;
-}
-.maillink{
-    text-decoration: none;
-    color: #767474
-}
-.maillink:hover{
-    text-decoration: none;
-    color: #ff004f
-}
-textarea{
-    resize: none;
-}
-}
+      <script>
+        var sidemenu=document.getElementById("sidemenu");
+        var bar=document.getElementById("bars");
+        function openmenu(){
+            sidemenu.style.right="0";
+            bar.style.display="none";
+            
+            
+        }
+        function closemenu(){
+            sidemenu.style.right="-300px";
+            bar.style.display="block";
+        }
+      </script>
+</body> 
+</html>
