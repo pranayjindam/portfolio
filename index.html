@@ -10,9 +10,53 @@
     <script src="https://kit.fontawesome.com/288dfedc20.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div class="typewriter">
+            <p id="typewriter-text"></p>
+        </div>
+
     <script>
-        AOS.init();
-      </script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const words = [
+                "Programmer",
+                "Software Developer",
+                "Problem Solver",
+                "Computer Science Student",
+                "frontend Developer"
+            ];
+            let index = 0;
+            let wordIndex = 0;
+            let currentWord = "";
+            let isDeleting = false;
+
+            function typeWriter() {
+                if (wordIndex < words.length) {
+                    if (!isDeleting && index < words[wordIndex].length) {
+                        currentWord = words[wordIndex].substring(0, index + 1);
+                        index++;
+                    } else if (isDeleting && index > 0) {
+                        currentWord = words[wordIndex].substring(0, index - 1);
+                        index--;
+                    }
+
+                    document.getElementById("typewriter-text").innerHTML = currentWord;
+
+                    let speed = 150;
+                    if (!isDeleting && index === words[wordIndex].length) {
+                        speed = 2000; // Pause before deleting
+                        isDeleting = true;
+                    } else if (isDeleting && index === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        speed = 500; // Pause before typing next word
+                    }
+
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
 </head>
 <body>
     <div id="header">
